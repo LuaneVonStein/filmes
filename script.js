@@ -16,7 +16,35 @@ const FILMS = [
     descricao: "Uma viagem épica através do espaço e do tempo para salvar a humanidade.",
     imagem: "https://upload.wikimedia.org/wikipedia/pt/thumb/3/3a/Interstellar_Filme.png/250px-Interstellar_Filme.png",
     background: "https://upload.wikimedia.org/wikipedia/pt/thumb/3/3a/Interstellar_Filme.png/250px-Interstellar_Filme.png"
-  }
+  },
+{
+  titulo: "A Origem",
+  descricao: "Um ladrão habilidoso entra nos sonhos das pessoas para roubar segredos e implantar ideias.",
+  imagem: "https://upload.wikimedia.org/wikipedia/pt/thumb/8/84/AOrigemPoster.jpg/250px-AOrigemPoster.jpg",
+  background: "https://upload.wikimedia.org/wikipedia/pt/thumb/8/84/AOrigemPoster.jpg/250px-AOrigemPoster.jpg"
+},
+
+{
+  titulo: "Meu Malvado Favorito",
+  descricao: "Alguém rouba umas das pirâmides do Egito, e isso instiga Gru, o protagonista, ou melhor vilão, a realizar um roubo maior do que esse.",
+  imagem: "https://upload.wikimedia.org/wikipedia/pt/thumb/7/7f/Despicable_Me_poster.jpg/250px-Despicable_Me_poster.jpg",
+  background: "https://upload.wikimedia.org/wikipedia/pt/thumb/7/7f/Despicable_Me_poster.jpg/250px-Despicable_Me_poster.jpg"
+},
+
+{
+  titulo: "Perdido em Marte",
+  descricao: "Um astronauta é deixado para trás em Marte e precisa usar sua engenhosidade para sobreviver.",
+  imagem: "https://upload.wikimedia.org/wikipedia/pt/thumb/e/e7/Martian_poster_2015.jpg/250px-Martian_poster_2015.jpg",
+  background: "https://upload.wikimedia.org/wikipedia/pt/thumb/e/e7/Martian_poster_2015.jpg/250px-Martian_poster_2015.jpg"
+},
+
+{
+  titulo: "Blade Runner 2049",
+  descricao: "Um novo blade runner descobre um segredo capaz de mergulhar a sociedade no caos.",
+  imagem: "https://upload.wikimedia.org/wikipedia/pt/thumb/a/af/Blade_Runner_2049.png/250px-Blade_Runner_2049.png",
+  background: "https://upload.wikimedia.org/wikipedia/pt/thumb/a/af/Blade_Runner_2049.png/250px-Blade_Runner_2049.png"
+}
+
 ];
 
 let currentIndex = 0;

@@ -1,11 +1,11 @@
-
+/* ===== RESET ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-
+/* ===== VARIABLES ===== */
 :root {
   --bg: #0d0d0f;
   --accent: #e50914;
@@ -16,15 +16,13 @@
   --transition: 0.2s ease;
 }
 
-
-html,
-body {
+/* ===== GENERAL ===== */
+html, body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
 }
-
 
 .container {
   max-width: 1200px;
@@ -32,7 +30,7 @@ body {
   padding: 0 16px;
 }
 
-
+/* ===== HEADER ===== */
 .header {
   position: sticky;
   top: 0;
@@ -52,7 +50,6 @@ body {
 .logo {
   font-size: 1.25rem;
   font-weight: 800;
-  letter-spacing: 1px;
   color: var(--accent);
 }
 
@@ -66,7 +63,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   opacity: 0.9;
-  transition: color var(--transition), opacity var(--transition);
+  transition: var(--transition);
 }
 
 .nav-link:hover {
@@ -74,22 +71,23 @@ body {
   opacity: 1;
 }
 
-
+/* ===== HERO ===== */
 .hero {
   position: relative;
-  min-height: 52vh;
+  min-height: 55vh;
   display: flex;
   align-items: flex-end;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 48px 0;
+  transition: background-image 0.3s ease;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.85));
   pointer-events: none;
 }
 
@@ -103,18 +101,14 @@ body {
   font-size: clamp(1.6rem, 4.5vw, 2.8rem);
   font-weight: 800;
   margin-bottom: 10px;
-  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
-  opacity: 1;
-  transition: opacity var(--transition);
+  text-shadow: 0 4px 16px rgba(0,0,0,0.8);
 }
 
 .hero-desc {
-  max-width: 70ch;
+  max-width: 60ch;
   margin-bottom: 18px;
   color: var(--text-muted);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-  opacity: 1;
-  transition: opacity var(--transition);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 .hero-actions {
@@ -122,14 +116,14 @@ body {
   gap: 12px;
 }
 
-/* Buttons */
+/* ===== BUTTONS ===== */
 .btn {
   border: none;
   padding: 10px 16px;
   border-radius: 6px;
   font-weight: 700;
   cursor: pointer;
-  transition: background var(--transition), transform var(--transition);
+  transition: var(--transition);
 }
 
 .btn-primary {
@@ -143,16 +137,16 @@ body {
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
   color: var(--text);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.18);
   transform: translateY(-2px);
 }
 
-
+/* ===== CARROSSEL ===== */
 .carousel-section {
   padding: 40px 0;
 }
@@ -161,14 +155,12 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 14px;
-  color: var(--text);
 }
 
 .carousel-wrapper {
-  overflow-x: 12px;
+  overflow-x: auto;
   padding-bottom: 8px;
   scrollbar-width: thin;
-  scroll-behavior: smooth;
 }
 
 .carousel {
@@ -179,84 +171,53 @@ body {
 .filme-poster {
   width: 150px;
   height: 225px;
-  flex: 0 0 auto;
   border-radius: 8px;
   background-size: cover;
   background-position: center;
   cursor: pointer;
+  flex: 0 0 auto;
+  transition: var(--transition);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .filme-poster:hover {
   transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
 }
 
-.filme-poster.active {
-  border-color: var(--accent);
-  transform: translateY(-4px) scale(1.02);
-}
-
-/* Footer */
+/* ===== FOOTER ===== */
 .footer {
   border-top: 1px solid var(--border);
   padding: 28px 0;
   text-align: center;
   color: var(--text-muted);
-  font-size: 0.95rem;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .hero {
-    min-height: 46vh;
-    padding: 36px 0;
+    min-height: 45vh;
   }
-
   .filme-poster {
     width: 130px;
     height: 195px;
   }
-
-  .hero-desc {
-    max-width: 55ch;
-  }
 }
 
 @media (max-width: 520px) {
-  .nav {
-    display: none;
-  }
-
+  .nav { display: none; }
   .hero {
     min-height: 38vh;
     padding: 24px 0;
   }
-
-  .hero-title {
-    font-size: 1.5rem;
-  }
-
   .hero-desc {
     display: none;
   }
-
-  .hero-actions {
-    gap: 8px;
-  }
-
   .btn {
     padding: 8px 12px;
     font-size: 0.9rem;
   }
-
   .filme-poster {
     width: 110px;
     height: 165px;
-  }
-
-  .section-title {
-    font-size: 1.1rem;
   }
 }
